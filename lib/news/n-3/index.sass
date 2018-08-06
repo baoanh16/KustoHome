@@ -1,0 +1,83 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-news-3
+	position: relative
+	z-index: 200
+	>.container
+		background: color-get($mau, trang)
+		+pad(50px 15px 30px 15px)
+		+media-breakpoint-up(lg)
+			+pad(100px null 90px null)
+	.item
+		display: block
+		figure
+			margin-bottom: 0
+			.img
+				overflow: hidden
+			img
+				width: 100%
+				transition: all .3s ease-in-out
+			h3
+				color: color-get($mau, main)
+				margin-bottom: 0
+				+fw(500)
+				text-transform: uppercase
+			p
+				color: color-get($mau, xam-6)
+				margin-bottom: 0
+				margin-top: 15px
+				+fz(15px)
+			time
+				+fz(13px)
+				+fw(300)
+				color: color-get($mau, xam-9)
+				margin-top: 20px
+				display: block
+				+lh(1)
+		&:hover
+			text-decoration: none
+			figure
+				img
+					transform: scale(1.2)
+	.news-item
+		.top-list
+			.item
+				figure
+					figcaption
+						padding-top: 20px
+					h3
+						+fz(18px)
+		.part-list
+			margin-top: 40px
+			+media-breakpoint-up(lg)
+				margin-top: 0
+			.item
+				figure
+					h3
+						+fz(16px)
+					figcaption
+						padding-top: 20px
+						+media-breakpoint-up(md)
+							padding-top: 0
+				+ .item
+					margin-top: 30px
+					position: relative
+					&:after
+						content: ''
+						+pos(abs, -15px null null 0)
+						width: 100%
+						height: 1px
+						background: color-get($mau,xam-12)
+
+		.other-list
+			margin-top: 45px
+			.item
+				margin-bottom: 40px
+				figure
+					figcaption
+						padding-top: 25px
+					h3
+						+fz(16px)

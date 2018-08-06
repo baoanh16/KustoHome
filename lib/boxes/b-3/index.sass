@@ -1,0 +1,48 @@
+@import ../../_includes
+
+.canhcam-boxes-3
+	position: relative
+	z-index: 200
+	&:before
+		+pos(abs,0 null null 50%)
+		height: 70px
+		width: 1px
+		background: color-get($mau, trang)
+		+media-breakpoint-up(lg)
+			content: ''
+	.container
+		background: color-get($mau, trang)
+		+pad(50px null 60px null)
+		+media-breakpoint-up(lg)
+			+pad(100px null 120px null)
+		.col-lg-6:first-child
+			margin-bottom: 40px
+			+media-breakpoint-up(lg)
+				margin-bottom: 0
+	h2
+		color: color-get($mau, trang)
+		margin-bottom: 60px
+	.img
+		height: 115px
+		margin-bottom: 32px
+		display: flex
+		align-items: flex-end
+		justify-content: center
+		img
+			width: 115px
+			display: block
+	.text
+		text-align: center
+		+pad(null 20px)
+		+media-breakpoint-up(lg)
+			+pad(null 80px)
+		h4
+			color: color-get($mau, trang)
+			+fz(20px)
+			+fw(500)
+			margin-bottom: 16px
+		p
+			color: color-get($mau, trang)
+			+fz(15px)
+			+fw(300)
+			margin-bottom: 0

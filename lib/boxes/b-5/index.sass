@@ -1,0 +1,55 @@
+@import ../../_includes
+
+.canhcam-boxes-5
+	position: relative
+	z-index: 200
+	.container
+		background: color-get($mau, trang)
+		+pad(30px null 30px null)
+		+media-breakpoint-up(lg)
+			+pad(70px null 65px null)
+	.item
+		+ .item
+			margin-top: 40px
+	.img
+		height: 100%
+		img
+			width: 100%
+	.text
+		display: flex
+		justify-content: center
+		flex-direction: column
+		height: 100%
+		padding-top: 20px
+		+media-breakpoint-up(lg)
+			padding-top: 0
+		@media (min-width: 1500px)
+			display: block
+			padding-top: 60px
+		h4
+			text-transform: uppercase
+			color: color-get($mau, duong-5)
+			+fw(500)
+			+fz(25px)
+			+lh(1)
+			margin-bottom: 23px
+		p
+			+fz(15px)
+			+fw(300)
+			+lh(22px)
+			margin-bottom: 0
+			color: color-get($mau, xam-6)
+		.viewmore
+			width: 170px
+			height: 35px
+			display: flex
+			align-items: center
+			justify-content: center
+			color: color-get($mau, xam-9)
+			border: 1px solid color-get($mau, xam-11)
+			margin-top: 30px
+			+media-breakpoint-up(lg)
+				&:hover
+					color: color-get($mau, trang)
+					background: color-get($mau, duong-5)
+					border-color: color-get($mau, duong-5)

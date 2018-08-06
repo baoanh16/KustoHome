@@ -1,0 +1,14 @@
+extends _layout/layout.pug
+block variables
+	- var title = "media"
+	- var description = "Description for media page"
+	- var bodyclass = "media"
+	- var href = "/media.html"
+block header
+	include ../lib/header/h-1/index.pug
+block body
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/nav/n-3/index.pug
+	include ../lib/news/n-3/index.pug
+block footer
+	include ../lib/footer/f-5/index.pug

@@ -1,0 +1,14 @@
+extends _layout/layout.pug
+block variables
+	- var title = "commercial"
+	- var description = "Description for commercial page"
+	- var bodyclass = "commercial"
+	- var href = "/commercial.html"
+block header
+	include ../lib/header/h-1/index.pug
+block body
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/nav/n-2/index.pug
+	include ../lib/boxes/b-5/index.pug
+block footer
+	include ../lib/footer/f-5/index.pug

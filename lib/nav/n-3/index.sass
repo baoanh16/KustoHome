@@ -1,0 +1,52 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-nav-3
+	position: relative
+	z-index: 200
+	.container
+		background: color-get($mau, trang)
+		height: 50px
+		+pad(5px null)
+		+media-breakpoint-up(lg)
+			margin-top: -50px
+	.nav-item
+		position: relative
+		.nav-link
+			// background: color-get($mau,xam-4)
+			color: color-get($mau,xam-3)
+			text-transform: uppercase
+			+fw(300)
+			+fz(15px)
+			+bor-rad(0)
+			+lh(22px)
+			+mar(0)
+			+pad(9px 45px)
+			position: relative
+			&:after
+				content: ''
+				widht: 0%
+				height: 1px
+				transform: translateX(-50%)
+				background: color-get($mau, duong-5)
+				+transition(all .3s ease-in-out)
+				+pos(abs, 100% null null 50%)
+		+ .nav-item
+			&:before
+				content: ''
+				+pos(abs, 50% null null 0)
+				transform: translateY(-50%)
+				height: 25px
+				width: 1px
+				background: color-get($mau,xam-3)
+
+		&:last-child
+			.nav-link
+				margin-right: 0
+		&:hover, &.active 
+			.nav-link
+				color: color-get($mau, duong-5)
+				&:after
+					width: 80%

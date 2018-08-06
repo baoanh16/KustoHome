@@ -1,0 +1,38 @@
+@import ../../_includes
+.canhcam-form-1
+	position: relative
+	z-index: 200
+	.container
+		background: color-get($mau, trang)
+		+pad(50px null 0 null)
+		+media-breakpoint-up(lg)
+			+pad(100px null 0 null)
+			margin-top: -50px
+		.contact
+			display: flex
+
+		.text
+			+pad(45px 30px)
+			h3
+				text-transform: uppercase
+				+fz(20px)
+				+fw(500)
+				+lh(30px)
+				color-get($mau, main)
+				margin-bottom: 30px
+			p, h4
+				margin-bottom: 0
+				+lh(22px)
+				+fz(15px)
+			h4
+				+fw(500)
+			p
+				+fw(300)
+			.contact
+				margin-bottom: 18px
+		.icon
+			margin-right: 14px
+			span
+				+lh(1)
+				+fz(20px)
+				color: color-get($mau, duong-5)

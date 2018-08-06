@@ -1,0 +1,141 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-banner-1
+	position: relative
+	z-index: 100
+	.slick-slider
+		position: relative
+		margin-bottom: 0
+		.slick-track
+			.item
+				position: relative
+				&:focus
+					outline: none
+				.title
+					+pos(abs, 54% null null 0)
+					transform: translateY(-50%)
+					left: 50px
+					&:before
+						content: ''
+						position: absolute
+						width: 3px
+						height: 30px
+						background: color-get($mau, trang)
+						left: -10px
+						top: 50%
+						transform: translateY(-50%)
+					h1
+						color: color-get($mau,trang)
+						+text-sha(1px 1px 3px rgba(0,0,0,.4))
+						+fw(300)
+						+fz(16px)
+						margin-bottom: 0
+						span
+							+fw(500)
+					+media-breakpoint-up(sm)
+						left: 70px
+						&:before
+							left: -15px
+							height: 70px
+						h1
+							+fz(30px)
+							+lh(40px)
+					+media-breakpoint-up(md)
+						left: 100px
+						&:before
+							left: -22px
+							height: 80px
+						h1
+							+fz(35px)
+							+lh(45px)
+					+media-breakpoint-up(lg)
+						left: calc((50% - 485px) + 85px)
+						&:before
+							left: -22px
+							height: 105px
+						h1
+							+fz(40px)
+							+lh(50px)
+					+media-breakpoint-up(xl)
+						left: calc((50% - 570px) + 85px)
+						h1
+							+fz(55px)
+							+lh(65px)
+					@media (min-width: 1500px)
+						left: calc((50% - 700px) + 85px)
+		// Arrow
+		.slick-arrow
+			background: none
+			color: rgba(255,255,255,.3)
+			z-index: 100
+			top: 54%
+			.slick-arrow
+			&:before
+				display: inline-block
+				font: normal normal normal 24px/1 "Material Design Icons"
+				font-size: inherit
+				text-rendering: auto
+				line-height: inherit
+				-webkit-font-smoothing: antialiased
+				+fz(50px)
+			&.slick-prev
+				left: calc(50% - 485px)
+				&:before
+					content: "\F141"
+			&.slick-next
+				right: calc(50% - 450px)
+				&:before
+					content: "\F142"
+			&.slick-disabled
+				&:before
+					+opacity(.5)
+			+media-breakpoint-up(xl)
+				&.slick-prev
+					left: calc(50% - 590px)
+				&.slick-next
+					right: calc(50% - 555px)
+			@media (min-width: 1500px)
+				&.slick-prev
+					left: calc(50% - 735px)
+				&.slick-next
+					right: calc(50% - 700px)
+			&:hover 
+				// background: color-get($mau,main)
+				color: color-get($mau,trang)
+		// Dots
+		.slick-dots
+			+pos(abs, null null null 0)
+			width: 100%
+			bottom: 10px
+			+media-breakpoint-up(sm)
+				bottom: 20px
+			+media-breakpoint-up(md)
+				bottom: 30px
+			+media-breakpoint-up(lg)
+				bottom: 100px
+			li
+				width: 12px
+				height: 12px
+				+mar(4px)
+				&:focus
+					outline: none
+				button
+					+pad(0)
+					width: 12px
+					height: 12px
+					background: none
+					border: 1px solid color-get($mau, trang)
+					+bor-rad(50%)
+					&:before
+						content: none 
+					// 	background: color-get($mau,trang)
+					// 	border: 1px solid color-get($mau, trang)
+					// 	+bor-rad(50%)
+					// 	width: 12px
+					// 	height: 12px
+				&.slick-active, &:hover
+					button
+						background: color-get($mau,trang)

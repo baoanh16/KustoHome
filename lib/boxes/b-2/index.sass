@@ -1,0 +1,31 @@
+@import ../../_includes
+
+.canhcam-boxes-2
+	position: relative
+	z-index: 200
+	.container
+		background: color-get($mau, trang)
+		+pad(30px null 45px null)
+		+media-breakpoint-up(lg)
+			+pad(75px null 90px null)
+	.img
+		height: 100%
+		img
+			width: 100%
+			+media-breakpoint-up(lg)
+				display: none
+			@media (min-width: 1500px)
+				display: block
+	.text
+		margin-top: .75rem
+		+media-breakpoint-up(lg)
+			margin-top: 0
+		p
+			+fw(300)
+			+fz(15px)
+			color: color-get($mau, xam-5)
+			+lh(1.5)
+			&.bold
+				+fz(20px)
+				+fw(400)
+				margin-bottom: 25px

@@ -1,0 +1,64 @@
+{
+    "SETUP": {
+        "index": {
+            "header": [
+                "header/h-1"
+            ],
+            "body": [
+                "banner/b-1",
+                "boxes/b-1",
+                "carousel/c-4"
+            ],
+            "footer": [
+                "footer/f-5"
+            ]
+        },
+        "about": {
+            "body": [
+                "breadcrumb/b-1",
+                "nav/n-1",
+                "nav/n-2",
+                "nav/n-3",
+                "boxes/b-2",
+                "boxes/b-3",
+                "boxes/b-4",
+                "testimonials/t-1"
+            ]
+        },
+        "commercial": {
+            "body": [
+                "boxes/b-9",
+                "boxes/b-5",
+                "boxes/b-6"
+            ]
+        },
+        "media-detail": {
+            "body": [
+                "news-details/n-1"
+            ]
+        },
+        "media": {
+            "body": [
+                "news/n-3"
+            ]
+        },
+        "residential-detail": {
+            "body": [
+                "carousel/c-3"
+            ]
+        },
+        "contact": {
+            "body": [
+                "form/f-1",
+                "map/m-1"
+            ]
+        },
+        "career": {
+            "body": [
+                "boxes/b-11",
+                "boxes/b-7",
+                "boxes/b-8"
+            ]
+        }
+    }
+}

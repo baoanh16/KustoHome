@@ -1,0 +1,46 @@
+@import ../../_includes
+.canhcam-carousel-4
+	.container
+		background: color-get($mau, trang)
+		+pad(50px null 30px null)
+		+media-breakpoint-up(lg)
+			+pad(100px null 75px null)
+		.owl-carousel
+			.owl-nav
+				margin-top: 30px
+				.owl-prev
+					right: 100%
+				.owl-next
+					left: 100%
+				.owl-prev, .owl-next
+					+mar(0 15px)
+					.mdi
+						+fz(40px)
+						opacity: .3
+						&:before
+							width: 36px
+							height: 36px
+							display: flex
+							justify-content: center
+							align-items: center
+							background: color-rgba(color-get($mau, main), .3)
+							color: color-get($mau, main)
+					&:hover,&:focus
+						background: none
+						outline: none
+				+media-breakpoint-up(lg)
+					width: 100%
+					position: absolute
+					top: 50%
+					height: 0
+					margin-top: 0
+					transform: translateY(-50%)
+					.owl-prev, .owl-next
+						+mar(0)
+						top: 50%
+						transform: translateY(-50%)
+						position: absolute
+						.mdi
+							&:before
+								background: none
+								color: color-rgba(color-get($mau, main), .3)

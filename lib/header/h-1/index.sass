@@ -1,0 +1,286 @@
+@import ../../_includes 
+.canhcam-header-1
+	height: 60px
+	background: color-rgba(color-get($mau, duong-1), 1)
+	.container,.row
+		height: 100%
+	.logo
+		img
+			transition: all .3s ease-in-out
+			width: 80px
+	.menu
+		display: flex
+		flex-direction: column
+		+pos(abs, 100% null null 0)
+		background: color-rgba(color-get($mau, duong-1), 1)
+		width: 100%
+		height: 100vh
+		align-items: center
+		transform: translateX(-100%)
+		transition: all .3s ease-in-out
+		&.active
+			transform: translateX(0)
+		.Module.Module-139
+			width: 100%
+			order: 2
+			.ModuleContent
+				width: 100%
+				.navbar
+					flex-direction: column
+					width: 100%
+					margin-top: 2rem
+					border-top: 1px dotted color-get($mau, trang)
+					+pad(0 15px)
+					.nav-link
+						color: color-get($mau,trang)
+						+fw(300)
+						+pad(.75rem 0)
+						+fz(16px)
+
+		.social
+			order: 3
+			.ModuleContent
+				display: flex
+				flex-direction: row
+				justify-content: center
+				.nav-link
+					color: color-get($mau, duong-2)
+					+pad(.75rem 1rem)
+					+fz(18px)
+					width: 40px
+					height: 40px
+					+bor-rad(50%)
+					border: 1px solid color-get($mau, duong-2)
+					display: flex
+					justify-content: center
+					align-items: center
+					margin: 1rem
+		.search
+			margin-top: 2rem
+			+pad(0 15px)
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			max-width: 400px
+			order: 1
+			.search-icon
+				order: 2
+				width: 33.5px
+				height: 33.5px
+				display: flex
+				justify-content: center
+				align-items: center
+				background: color-get($mau, duong-2)
+				color: color-get($mau, trang)
+			.searchbox
+				order: 1
+				width: 250px
+				display: flex
+				input
+					border: none
+					width: 250px
+					+pad(0 0 0 1rem)
+					&:focus, &:focus-within, &:active
+						outline: none
+						box-shadow: none
+						border-color: color-get($mau, duong-2)
+				button
+					position: relative
+					height: 33.5px
+					width: 33.5px
+					padding: 0
+					border: none
+					outline: none
+					+fz(0)
+					&:before
+						border: none
+						outline: none
+						font-family: 'Font Awesome 5 Free'
+						font-weight: 900
+						-webkit-font-smoothing: antialiased
+						display: flex
+						justify-content: center
+						align-items: center
+						font-style: normal
+						font-variant: normal
+						text-rendering: auto
+						line-height: 1
+						content: '\f002'
+						+pos(abs,0 0 null null)
+						width: 33.5px
+						height: 33.5px
+						background: color-get($mau, duong-2)
+						color: color-get($mau, trang)
+						+fz(18px)
+	.language
+		margin-right: .75rem
+		select
+			background: none
+			border: none
+			color: color-get($mau, duong-2)
+			+fz(14px)
+			&:focus,&:active
+				background: none
+				border: none
+				outline: none
+	.toggle-menu-mobile
+		width: 40px
+		height: 40px
+		+fz(25px)
+		color: color-get($mau, trang)
+		justify-content: center
+		align-items: center
+
+
++media-breakpoint-up(lg)
+	.canhcam-header-1
+		height: 120px
+		background: color-rgba(color-get($mau, duong-1), .5)
+		.logo
+			img
+				transition: all .3s ease-in-out
+				width: 120px
+		.menu
+			flex-direction: row
+			position: initial
+			transform: initial
+			height: auto
+			width: auto
+			background: none
+			.Module.Module-139
+				width: 100%
+				order: 1
+				.ModuleContent
+					width: 100%
+					.navbar
+						flex-direction: row
+						border-top: none
+						margin-top: 0
+						padding-right: 15px
+						.nav-link
+							+fz(14px)
+							+pad(10px)
+							+media-breakpoint-up(xl)
+								+pad(10px 15px)
+							line-height: 1
+							&.active, &:hover
+								color: color-get($mau,tramg)
+								+fw(500)
+								background: linear-gradient(to bottom, color-get($mau,duong-5), color-get($mau, duong-4))
+			.social
+				order: 2
+				.ModuleContent
+					margin-right: 15px
+					padding-left: 16px
+					border-left: 1px solid color-rgba(color-get($mau,trang), .5)
+					height: 35px
+					display: flex
+					align-items: center
+					.nav-link
+						+pad(0)
+						width: 26px
+						height: 26px
+						+fz(12px)
+						+mar(0 12px 0 0)
+						&:last-child
+							margin-right: 0
+			.search
+				+pad(0)
+				margin-top: 0
+				margin-right: 14px
+				// margin-right: 28px
+				order: 3
+				width: initial
+				position: relative
+				.search-icon
+					border: 1px solid color-get($mau, duong-2)
+					background: none
+					color: color-get($mau, duong-2)
+					width: 26px
+					height: 26px
+					cursor: pointer
+				.searchbox
+					width: 0
+					+pos(abs, calc(100% + 47px) -1rem null null)
+					+pad(null 0)
+					height: 50px
+					display: flex
+					justify-content: center
+					align-items: center
+					background: color-rgba(color-get($mau, duong-1), .5)
+					transition: all .3s ease-in-out
+					overflow: hidden
+					input
+						width: 200px
+						height: 34px
+					button
+						&:before
+							border: none
+							outline: none
+							font-family: 'Font Awesome 5 Free'
+							font-weight: 900
+							-webkit-font-smoothing: antialiased
+							display: flex
+							justify-content: center
+							align-items: center
+							font-style: normal
+							font-variant: normal
+							text-rendering: auto
+							line-height: 1
+							content: '\f002'
+							width: 33.5px
+							height: 33.5px
+							background: color-get($mau, duong-2)
+							color: color-get($mau, trang)
+					&.show
+						+pad(null 1rem)
+						width: 250px
+						// &:before
+						// 	right: 0
+		.language
+			margin-right: 0
+		&.active
+			height: 60px
+			background: color-rgba(color-get($mau, main), 1)
+			.logo
+				img
+					width: 100px
+			.search
+				.searchbox
+					background: color-rgba(color-get($mau, main), 1)
+					top: calc(100% + 17px)
+@media (min-width: 1500px)
+	.canhcam-header-1
+		height: 120px
+		.logo
+			img
+				transition: all .3s ease-in-out
+				width: 185px
+		.menu
+			.Module.Module-139
+				.ModuleContent
+					.navbar
+						padding-right: 40px
+						.nav-link
+							+fz(16px)
+							+pad(10px 32px)
+			.social
+				.ModuleContent
+					margin-right: 30px
+					padding-left: 32px
+					.nav-link
+						+mar(0 12px 0 0)
+						&:last-child
+							margin-right: 0
+			.search
+				margin-right: 32px
+				.searchbox
+					top: calc(100% + 47px)
+			.logo
+				img
+					width: 100px
+		&.active
+			.search
+				.searchbox
+					top: calc(100% + 17px)

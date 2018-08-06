@@ -1,0 +1,14 @@
+extends _layout/layout.pug
+block variables
+	- var title = "residential"
+	- var description = "Description for residential page"
+	- var bodyclass = "residential"
+	- var href = "/residential.html"
+block header
+	include ../lib/header/h-1/index.pug
+block body
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/nav/n-3/index.pug
+	include ../lib/boxes/b-6/index.pug
+block footer
+	include ../lib/footer/f-5/index.pug

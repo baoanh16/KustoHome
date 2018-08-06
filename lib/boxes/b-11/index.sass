@@ -1,0 +1,49 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-boxes-11
+	.container
+		background: color-get($mau, trang)
+		+pad(50px null 30px null)
+		+media-breakpoint-up(lg)
+			+pad(90px null 75px null)
+	.table 
+		thead 
+			background: color-rgba(color-get($mau,main),.1)
+			color: color-get($mau,trang)
+			border-bottom: 2px solid color-get($mau, duong-5)
+			th
+				border: 0
+				+lh(60px)
+				+fz(18px)
+				+fw(500)
+				+pad(0)
+				color: color-get($mau, duong-5)
+				&:first-child
+					padding-left: 50px
+					width: 50%
+				+ th
+					width: calc(50% / 3)
+					padding-left: 0
+		tbody 
+			td, th 
+				+lh(60px)
+				border: 0
+				+pad(0)
+			th
+				+fz(15px)
+				+fw(400)
+				padding-left: 50px
+			td
+				color: color-get($mau, xam-9)
+			tr
+				border-bottom: 1px solid color-get($mau, xam-8)
+				cursor: pointer
+				&:hover
+					background: color-get($mau, xam-4)
+					box-shadow: 0 3px 10px color-rgba(color-get($mau,den), .2)
+					a
+						text-decoration: none
+						color: color-get($mau, duong-5)
