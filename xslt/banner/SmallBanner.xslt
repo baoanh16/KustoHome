@@ -5,8 +5,11 @@
   	<xsl:template match="/">
 		<article class="owl-carousel owl-theme list-items">
 				<!--Call Banner Child-->
-				<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
+			<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 		</article>
+		<h3>
+			<xsl:value-of select="/BannerList/ZoneTitle"></xsl:value-of>
+		</h3>
 	</xsl:template>
 
 	<!--Begin Banner Child-->
@@ -15,7 +18,7 @@
 		<div class="item">
 			<img>
 				<xsl:attribute name="src">
-				<xsl:value-of select="ImageUrl"></xsl:value-of>
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
 			</img>
 		</div>

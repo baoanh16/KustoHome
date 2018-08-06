@@ -5,6 +5,21 @@
 
 .canhcam-breadcrumb-1
 	position: relative
+	.ModuleContent
+		position: relative
+		h3
+			+fz(33px)
+			+fw(400)
+			color: white
+			text-shadow: 0 3px 7px color-rgba(color-get($mau, den), .3)
+			text-transform: uppercase
+			position: absolute
+			top: 55%
+			left: 50%
+			transform: translate(-50%, -100%)
+			z-index: 300
+			@media (min-width:1500px)
+				top: 53%
 	.main-breadcrumb
 		position: absolute
 		top: 0
@@ -13,19 +28,12 @@
 		height: 100%
 		display: none
 		z-index: 100
+		margin-top: 2rem
 		+media-breakpoint-up(md)
 			display: flex
 			justify-content: center
 			align-items: center
 			flex-direction: column
-		h3
-			+media-breakpoint-up(lg)
-				margin-top: 3rem
-			+fz(33px)
-			+fw(400)
-			color: white
-			text-shadow: 0 3px 7px color-rgba(color-get($mau, den), .3)
-			text-transform: uppercase
 		.breadcrumb
 			margin-bottom: 0
 			+bor-rad(0)

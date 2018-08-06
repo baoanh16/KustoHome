@@ -110,7 +110,9 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
                 }
             }
         </style>
+
         <portal:ScriptLoader ID="ScriptLoader1" runat="server" IncludejQueryUICore="true" IncludeFancyBox="false" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;subset=vietnamese" rel="stylesheet">
         <portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false" JQueryUIThemeName="smoothness" />
         <portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
     </head>
