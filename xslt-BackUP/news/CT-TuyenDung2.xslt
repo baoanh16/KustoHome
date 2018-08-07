@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-	<xsl:output method="html" indent="yes"/>	
+	<xsl:output method="html" indent="yes"/>
+
+	<!--Begin News-->
   <xsl:template match="/">
 	  <section class="canhcam-boxes-7">
         <article class="container">
@@ -71,7 +72,7 @@
                     <p>Exp Date</p>
                   </div>
                   <div class="content">
-                    <xsl:value-of select="CreatedDate"></xsl:value-of>
+                    <p><xsl:value-of select="EndDate" disable-output-escaping="yes"></xsl:value-of></p>
                   </div>
                 </div>
                 <div class="item col-lg-6">
@@ -86,17 +87,34 @@
               <div class="text">
                 <h3>Job Description</h3>
                 <ul>
-                <xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
                 </ul>
               </div>
               <div class="text">
                 <h3>Job Requirements</h3>
                 <ul>
-                  <xsl:apply-templates select="/NewsDetail/NewsOther1"></xsl:apply-templates>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
                 </ul>
                 <h3 class="benefit">Benefits</h3>
                 <ul class="benefit">
-                  <xsl:apply-templates select="/NewsDetail/NewsOther2"></xsl:apply-templates>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
+                  <li><xsl:value-of select="/NewsDetail/Title"></xsl:value-of></li>
                 </ul>
               </div><a class="btn" href="#">APPLY NOW</a>
             </div>
@@ -126,20 +144,8 @@
       </div>
     </a>
   </xsl:template>
-  <xsl:template match="NewsOther">
-    <li>
-      <xsl:value-of select="Title"></xsl:value-of>
-    </li>
-  </xsl:template>
-  <xsl:template match="NewsOther1">
-    <li>
-      <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
-    </li>
-  </xsl:template>
-  <xsl:template match="NewsOther2">
-    <li>
-      <xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
-    </li>
-  </xsl:template>
+
+
+
 
 </xsl:stylesheet>

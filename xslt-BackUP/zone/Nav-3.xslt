@@ -3,20 +3,22 @@
   <xsl:output method="html" indent="yes"/>
 
   <xsl:template match="/">
-    <ul class="nav navbar">
-      <xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
-    </ul>
+	<div class="container">
+		<ul class="nav justify-content-center nav-pills" data-select=''>
+			<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
+		</ul>
+	</div>
   </xsl:template>
 
   <xsl:template match="Zone">
 
     <li class="nav-item">
+		<xsl:if test="IsActive='true'">
+		<xsl:attribute name="class">
+			<xsl:text>nav-item active</xsl:text>
+		</xsl:attribute>
+		</xsl:if>
         <a class="nav-link">
-          <xsl:if test="IsActive='true'">
-            <xsl:attribute name="class">
-              <xsl:text>nav-link active</xsl:text>
-            </xsl:attribute>
-          </xsl:if>
           <xsl:attribute name="href">
             <xsl:value-of select="Url"></xsl:value-of>
           </xsl:attribute>
