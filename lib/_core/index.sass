@@ -238,3 +238,25 @@ main
 		+pad(null 30px)
 		+media-breakpoint-up(lg)
 			+pad(null 60px)
+.pagination
+	justify-content: center
+	+pad(2rem 0 0 0)
+	margin-top: -6rem
+	li
+		width: 1rem
+		height: 2rem
+		display: flex
+		justify-content: center
+		align-items: center
+		background: none
+		margin-right: 1rem
+		// border: 1px solid color-get($mau,main)
+		cursor: pointer
+		text-decoration: none
+			
+		&:hover
+			a
+				color: color-get($mau,main)
+				transform: translateY(-5px)
+				border-bottom: 1.5px solid color-get($mau,duong-5)
+				+fz(1.1rem)
