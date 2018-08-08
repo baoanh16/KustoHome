@@ -44,7 +44,9 @@
         },
         "residential-detail": {
             "body": [
-                "carousel/c-3"
+                "carousel/c-3",
+                "boxes/b-10",
+                "boxes/b-12"
             ]
         },
         "contact": {

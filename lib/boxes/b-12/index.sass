@@ -1,0 +1,78 @@
+@import ../../_includes
+.canhcam-boxes-12
+	position: relative
+	z-index: 200
+	.container
+		background: color-get($mau, trang)
+		+pad(50px null 30px null)
+		+media-breakpoint-up(lg)
+			+pad(80px null 90px null)
+		h2
+			text-align: left
+			margin-bottom: 30px
+		.owl-carousel
+			.owl-nav
+				margin-top: 30px
+				.owl-prev
+					right: 40px
+				.owl-next
+					right: 0
+				.owl-prev, .owl-next
+					+mar(0 15px)
+					.mdi
+						+fz(40px)
+						opacity: .3
+						&:before
+							width: 36px
+							height: 36px
+							display: flex
+							justify-content: center
+							align-items: center
+							background: color-rgba(color-get($mau, main), .3)
+							color: color-get($mau, main)
+					&:hover,&:focus
+						background: none
+						outline: none
+				+media-breakpoint-up(lg)
+					width: 100%
+					position: absolute
+					bottom: calc(100% + 30px)
+					height: 0
+					margin-top: 0
+					.owl-prev, .owl-next
+						+mar(0)
+						bottom: 100%
+						// transform: translateY(-50%)
+						position: absolute
+						.mdi
+							&:before
+								width: 20px
+								height: 20px
+								background: none
+								color: color-rgba(color-get($mau, main), .3)
+			
+			.item
+				position: relative
+				.content
+					+pad(.75rem 0 0 0)
+					p
+						margin-bottom: 0
+						+fz(15px)
+						+lh(28px)
+						+fw(300)
+					h3
+						+fw(500)
+						+fz(20px)
+						+lh(28px)
+						text-transform: uppercase
+						margin-bottom: 0
+				+media-breakpoint-up(lg)
+					.content
+						+pos(abs,0 null null 0)
+						width: 100%
+						height: 100%
+						color: color-get($mau, trang)
+						+pad(30px)
+						display: flex
+						flex-direction: column
+						justify-content: flex-end

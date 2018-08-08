@@ -8,133 +8,33 @@
 		+media-breakpoint-up(lg)
 			+pad(100px null 0 null)
 			margin-top: -50px
+		.col-lg-4
+			.text
+				+pad(40px)
 	.system-title
 		display: none
 	.filtermap
 		.label
 			display: none
 	.wrap-form
-		p
-			width: 100%
-			+pad(0 15px)
-			+fz(1rem)
-			+fw(300)
-			color: #534b40
-		.qcustom
-			display: none
-		label
-			display: none
-		img
-			width: 100%!important
-		.frm-captcha
-			width: 100%
-			display: flex
-			align-items: center
-			+media-breakpoint-up(lg)
-				width: 50%
-				margin-bottom: 0
-			.frm-captcha-input
-				order: 1
-				margin-left: 1rem
-		.frm-btnwrap
-			// width: 50%
-			margin-bottom: 0
-			+media-breakpoint-up(lg)
-				transform: translateY(-69px)
-		.frm-btn
-			+media-breakpoint-up(lg)
-				display: flex
-				justify-content: flex-end
-			input[type="submit"]
-				+pad(.5rem 2rem)
-				background: color-get($mau,main)
-				color: color-get($mau,trang)
-			input[type="reset"]
-				display: none
-		.form-group
-			+pad(0 15px)
-		#ctl00_mainContent_ctl04_pnlQuestions
-			display: flex
-			flex-wrap: wrap
-			.form-group
-				width: 100%
-				position: relative
-				input
-					width: 100%
-				> span
-					position: absolute
-					right: 8%
-					top: 0
-					line-height: 36.8px
-					color: color-get($mau,cam-3)
-				+media-breakpoint-up(md)
-					width: 50%
-					&.ct-subject,&.ct-message,&.ct-button
-						width: 100%
-					&.ct-button
-						display: flex
-						justify-content: flex-end
-				&.qdropdown,&.qparagraph
-					width: 100%
-				&.qparagraph
-					textarea
-						width: 100%
-				&.qdropdown
-					select
-						width: 100%
-						background-color: #f8f8f8
-						+fw(700)
-						+pad(1rem 1.75rem 1rem 0.75rem)
-						height: calc(2.25rem + 15px)
-				input,textarea
-					+pad(.5rem 0.75rem)
-					background: #f8f8f8
-				textarea
-					height: 180px
-
-	.info
-		h3
-			+fz(1.3rem)
-			text-transform: uppercase
-		.inf
-			+pad(2rem)
-			background: color-get($mau , xam-11)
-
+		.Module.Module-166
 			h2
-				+fz(1.3rem)
-			.content
-				margin-top: 1rem
-				max-height: 350px
-				overflow-y: scroll
-				&::-webkit-scrollbar-track
-					background: #e5e5e5
-				&::-webkit-scrollbar-thumb
-					background: color-get($mau,main)
-				&::-webkit-scrollbar
-					width: 5px
-			.content-list
-				+pad(0 0 1.5rem 0)
-				ul
-					+pad(0)
-					+mar(0)
-					list-style-type: none
-					li
-						+fz(1rem)
-						+fw(300)
-						color: color-get($mau , xam-4)
-						margin-bottom: 1.5rem
-						.number
+				+fz(33px)
+				+fw(500)
+				color: color-get($mau, main)
+				text-transform: uppercase
+				margin-bottom: 40px
+				line-height: 33px
+			p
+		.Module.Module-165
+			.wrap-contact
+				#ctl00_mainContent_ctl04_pnlSend
+					display: flex
+					flex-wrap: wrap
+					.form-group
+						label
 							display: none
-						div
-							color: #666666
-							+fw(400)
-						strong
-							+fw(700)
-							color: color-get($mau , main)
-							+fz(1.1rem)
-						span
-							color: #666666
-							+fw(700)
-	.wrapper-dealer
-		.custom-select
-			margin: .5rem 0
+						&.ct-name, &.ct-address, &.ct-email, &.ct-phone
+							max-width: 50%
+							flex: 0 0 50%
+
