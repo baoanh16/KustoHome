@@ -3,28 +3,26 @@
   <xsl:output method="html" indent="yes"/>
 
   	<xsl:template match="/">
-		<xsl:if test="count(/BannerList/Banner) > 0">
-			<article class="list-items">
-				<!--Call Banner Child-->
+		<article class="container">
+			<h2 class="kusto-title">
+				<xsl:value-of select="/BannerList/ModuleTitle"></xsl:value-of>
+			</h2>
+			<div class="owl-carousel owl-theme list-items">
+			<!--Call Banner Child-->
 				<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
-			</article> 
-		</xsl:if>
+			</div>
+		</article>
 	</xsl:template>
 
 	<!--Begin Banner Child-->
 	<xsl:template match="Banner">
 		<!--item-->
 		<div class="item">
-			<img class="img-fluid">
+			<img>
 				<xsl:attribute name="src">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
 			</img>
-			<div class="title">
-				<h1>
-          <xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
-        </h1>
-			</div>
 		</div>
 	</xsl:template>
 

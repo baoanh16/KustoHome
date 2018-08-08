@@ -3,83 +3,112 @@
   <xsl:output method="html" indent="yes"/>
 
   <xsl:template match="/">
-    <div class="row news-wrap">
-      <h1 class="col-sm-12 title-page">
-        <span>
-          <xsl:value-of select="/NewsList/ZoneTitle"></xsl:value-of>
-        </span>
-      </h1>
-      <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+    <section class="canhcam-news-3">
+        <div class="container">
+          <h2 class="kusto-title"><xsl:value-of select="/NewsList/ZoneTitle"></xsl:value-of>
+          </h2>
+          <div class="container news-item">
+            <div class="row">
+              <div class="col-lg-6 top-list"><a class="item">
+                  <xsl:attribute name="href">
+                    <xsl:value-of select="Url"></xsl:value-of>
+                  </xsl:attribute>
+                  <xsl:attribute name="target">
+                    <xsl:value-of select="Target"></xsl:value-of>
+                  </xsl:attribute>
+                  <xsl:attribute name="title">
+                    <xsl:value-of select="Title"></xsl:value-of>
+                  </xsl:attribute>
+                  <figure>
+                    <div class="img">
+                      <img>
+                        <xsl:attribute name="src">
+                          <xsl:value-of select="ImageUrl"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:attribute name="alt">
+                          <xsl:value-of select="Title"></xsl:value-of>
+                        </xsl:attribute>
+                      </img>
+                    </div>
+                    <figcaption>
+                      <h3>
+                        <xsl:value-of select="/NewsList/ZoneTitle"></xsl:value-of>
+                      </h3>
+                      <time>
+                        <xsl:value-of select="CreatedDate"></xsl:value-of>
+                      </time>
+                    </figcaption>
+                  </figure>
+                  </a>
+                </div>
+              <div class="col-lg-6 part-list"><a class="item" href="#">
+                  <figure class="row">
+                    <div class="col-md-4">
+                      <div class="img"><img class="img-fluid" src="./img/media/m-2.jpg" alt="alt"></div>
+                    </div>
+                    <figcaption class="col-md-8">
+                      <h3>Kusto Group aims to turn its firms into S-E Asian leaders</h3>
+                      <time>12/12/2017</time>
+                    </figcaption>
+                  </figure></a><a class="item" href="#">
+                  <figure class="row">
+                    <div class="col-md-4">
+                      <div class="img"><img class="img-fluid" src="./img/media/m-3.jpg" alt="alt"></div>
+                    </div>
+                    <figcaption class="col-md-8">
+                      <h3>Alexander Pirogov: “Kusto Logistics is a company that stands by its word”</h3>
+                      <time>12/12/2017</time>
+                    </figcaption>
+                  </figure></a><a class="item" href="#">
+                  <figure class="row">
+                    <div class="col-md-4">
+                      <div class="img"><img class="img-fluid" src="./img/media/m-4.jpg" alt="alt"></div>
+                    </div>
+                    <figcaption class="col-md-8">
+                      <h3>Kusto Home, Coteccons sign deal on Diamond Island apartments</h3>
+                      <time>12/12/2017</time>
+                    </figcaption>
+                  </figure></a></div>
+            </div>
+            <div class="row other-list">
+              <xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
+            </div>
+          </div>
+        </div>
+      </section>
+  </xsl:template>
+  <xsl:template match="NewsOther">
+    <div class="col-sm-6 col-lg-4">
+      <a class="item">
+          <xsl:attribute name="href">
+            <xsl:value-of select="Url"></xsl:value-of>
+          </xsl:attribute>
+          <xsl:attribute name="target">
+            <xsl:value-of select="Target"></xsl:value-of>
+          </xsl:attribute>
+          <xsl:attribute name="title">
+            <xsl:value-of select="Title"></xsl:value-of>
+          </xsl:attribute>
+        <figure>
+          <div class="img"><img class="img-fluid" alt="alt">
+          <img>
+            <xsl:attribute name="src">
+              <xsl:value-of select="ImageUrl"></xsl:value-of>
+            </xsl:attribute>
+            <xsl:attribute name="alt">
+              <xsl:value-of select="Title"></xsl:value-of>
+            </xsl:attribute>
+          </img>
+          </div>
+          <figcaption>
+            <h3><xsl:value-of select="/NewsList/ZoneTitle"></xsl:value-of></h3>
+            <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+            </p>
+            <time><xsl:value-of select="CreatedDate"></xsl:value-of></time>
+          </figcaption>
+        </figure>
+      </a>
     </div>
   </xsl:template>
 
-  <xsl:template match="News">
-    <div class="news-item mrb40 clearfix">
-      <div class="col-sm-4 mrb10">
-        <figure>
-          <a class="ls-img center-block">
-            <xsl:attribute name="href">
-              <xsl:value-of select="Url"></xsl:value-of>
-            </xsl:attribute>
-            <xsl:attribute name="target">
-              <xsl:value-of select="Target"></xsl:value-of>
-            </xsl:attribute>
-            <xsl:attribute name="title">
-              <xsl:value-of select="Title"></xsl:value-of>
-            </xsl:attribute>
-            <img>
-              <xsl:attribute name="src">
-                <xsl:value-of select="ImageUrl"></xsl:value-of>
-              </xsl:attribute>
-              <xsl:attribute name="alt">
-                <xsl:value-of select="Title"></xsl:value-of>
-              </xsl:attribute>
-            </img>
-          </a>
-          <figcaption></figcaption>
-        </figure>
-      </div>
-      <div class="col-sm-8 news-content mrb10">
-        <h2>
-          <a>
-            <xsl:attribute name="href">
-              <xsl:value-of select="Url"></xsl:value-of>
-            </xsl:attribute>
-            <xsl:attribute name="target">
-              <xsl:value-of select="Target"></xsl:value-of>
-            </xsl:attribute>
-            <xsl:attribute name="title">
-              <xsl:value-of select="Title"></xsl:value-of>
-            </xsl:attribute>
-            <xsl:value-of select="Title"></xsl:value-of>
-          </a>
-          <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-        </h2>
-        <div class="mrb10">
-          <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
-        </div>
-      </div>
-      <div class="col-sm-12 ">
-        <div class="news-desc">
-          <time>
-            <xsl:value-of select="CreatedDate"></xsl:value-of>
-          </time>
-          <a class="readmore">
-            <xsl:attribute name="href">
-              <xsl:value-of select="Url"></xsl:value-of>
-            </xsl:attribute>
-            <xsl:attribute name="target">
-              <xsl:value-of select="Target"></xsl:value-of>
-            </xsl:attribute>
-            <xsl:attribute name="title">
-              <xsl:value-of select="Title"></xsl:value-of>
-            </xsl:attribute>
-            <xsl:value-of select="/NewsList/ViewMore"></xsl:value-of>
-            <xsl:text> </xsl:text>
-            <i class="fa fa-angle-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </xsl:template>
 </xsl:stylesheet>
