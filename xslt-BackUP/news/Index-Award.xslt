@@ -4,36 +4,35 @@
 
 	<!--Begin News-->
 	<xsl:template match="/">
-		<section class="canhcam-boxes-6">
-			<article class="container">
+		<article class="container">
 			<h2 class="kusto-title">
-				<xsl:value-of select="NewsList/ModuleTitle"></xsl:value-of>
+				<xsl:value-of select="/NewsList/ModuleTitle"></xsl:value-of>
 			</h2>
 			<div class="owl-carousel owl-theme">
 				<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 			</div>
-			</article>
-		</section>
+		</article>
 	</xsl:template>
 
-
 	<xsl:template match="News">
-		<a>
-			<xsl:attribute name="href">
-				<xsl:value-of select="Url"></xsl:value-of>
-			</xsl:attribute>
-			<div class="item">
-				<img>
-					<xsl:attribute name="src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
+		<div class="item">
+			<img>
+				<xsl:attribute name="src">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
+			</img>
+			<div class="content">
+				<h3>
+					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+				</h3>
+				<a class="btn readmore">
+					<xsl:attribute name="href">
+						<xsl:value-of select="Url"></xsl:value-of>
 					</xsl:attribute>
-				</img>
-				<div class="content">
-					<p><xsl:value-of select="SubTitle" disable-output-escaping="yes"></xsl:value-of></p>
-					<h3><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></h3>
-				</div>
+					READ MORE
+				</a>
 			</div>
-		</a>
+		</div>
 		<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 	</xsl:template>
 </xsl:stylesheet>
