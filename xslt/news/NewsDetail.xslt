@@ -3,168 +3,134 @@
   <xsl:output method="html" indent="yes"/>
 
   <xsl:template match="/">
-    <section class="canhcam-news-details-1">
-        <article class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="news-read">
-                <h1>
-                  <xsl:value-of select="/NewsDetail/Title"></xsl:value-of>
-                  <xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
-                </h1>
-                <time>
-                  <xsl:text> </xsl:text>
-                  <xsl:value-of select="/NewsDetail/CreatedDate"></xsl:value-of>
-                </time>
-                <p class="lead"><xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of></p>
-                <p><strong><xsl:value-of select="Title"></xsl:value-of></strong></p>
-                <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
-                <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
-                <figure><img class="img-fluid" src="">
-                  <xsl:attribute name="src">
-                    <xsl:value-of select="ImageUrl"></xsl:value-of>
-                  </xsl:attribute>
-                  <figcaption>
-                    <xsl:attribute name="alt">
-                      <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                  </figcaption>
-                </figure>
-                <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
-                <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
-                <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
-                <figure><img class="img-fluid" src="">
-                  <xsl:attribute name="src">
-                    <xsl:value-of select="ImageUrl"></xsl:value-of>
-                  </xsl:attribute>
-                  <figcaption>
-                    <xsl:attribute name="alt">
-                      <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                  </figcaption>
-                </figure>
-                <p> <strong><xsl:value-of select="Title"></xsl:value-of></strong></p>
-                <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
-                <figure><img class="img-fluid" src="">
-                  <xsl:attribute name="src">
-                    <xsl:value-of select="ImageUrl"></xsl:value-of>
-                  </xsl:attribute>
-                  <figcaption>
-                    <xsl:attribute name="alt">
-                      <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                  </figcaption>
-                </figure>
-                <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
-                <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
-                <div class="card">
-                  <div class="card-body"> 
-                    <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p><br>
-                    <p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
-                    <a href="tel:0938480888">
-                    <xsl:attribute name="href">
-                      <xsl:value-of select="Url"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="target">
-                      <xsl:value-of select="Target"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="title">
-                      <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                    </a><span>or visit </span><a href="#">
-                    <xsl:attribute name="href">
-                      <xsl:value-of select="Url"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="target">
-                      <xsl:value-of select="Target"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="title">
-                      <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                    </a></p>
-                  </div>
-                </div>
-                <div class="social-networks nav">
-                  <div class="nav-item">
-                    <div class="fb-share-button" data-href="" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="">Chia sẻ</a></div>
-                  </div>
-                  <div class="nav-item"><a class="twitter-share-button" href="https://twitter.com/share" data-size="medium" data-text="custom share text" data-url="" data-via="twitterdev" data-related="twitterapi,twitter">Tweet</a></div>
-                  <div class="nav-item">
-                    <div class="g-plusone" data-size="tall"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="othernews">
-                <h2><xsl:value-of select="Title"></xsl:value-of></h2>
-                <div class="lists">
-                  <xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
-                </div>
-              </div>
-              <div class="ads">
-              <a href="#">
-                <xsl:attribute name="href">
-                  <xsl:value-of select="Url"></xsl:value-of>
-                </xsl:attribute>
-                <xsl:attribute name="target">
-                  <xsl:value-of select="Target"></xsl:value-of>
-                </xsl:attribute>
-                <xsl:attribute name="title">
-                  <xsl:value-of select="Title"></xsl:value-of>
-                </xsl:attribute>
-                <img>
-                  <xsl:attribute name="src">
-                    <xsl:value-of select="ImageUrl"></xsl:value-of>
-                  </xsl:attribute>
-                  <xsl:attribute name="alt">
-                    <xsl:value-of select="Title"></xsl:value-of>
-                  </xsl:attribute>
-                </img>
-
-              </a>
-              </div>
+    <section class="cc-content-newsdetail mrt30">
+      <div class="container">
+        <div class="row">
+          <div class="item mrb30">
+            <h3>
+              <xsl:value-of select="/NewsDetail/Title"></xsl:value-of>
+              <xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
+            </h3>
+            <time>
+              <i class="fa fa-calendar"></i>
+              <xsl:text> </xsl:text>
+              <xsl:value-of select="/NewsDetail/CreatedDate"></xsl:value-of>
+            </time>
+            <div class="desc">
+              <xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
             </div>
           </div>
-        </article>
-      </section>
+          <nav class="social">
+            <button href="#" class="btn btn-default toggle">
+              <i class="fa fa-share-alt"></i>
+              <ul class="list-inline">
+                <li>
+                  <xsl:value-of select="/NewsDetail/FacebookLike" disable-output-escaping="yes"></xsl:value-of>
+                </li>
+                <li>
+                  <xsl:value-of select="/NewsDetail/PlusOne" disable-output-escaping="yes"></xsl:value-of>
+                </li>
+                <li>
+                  <xsl:value-of select="/NewsDetail/TweetThis" disable-output-escaping="yes"></xsl:value-of>
+                </li>
+              </ul>
+            </button>
+          </nav>
+          <xsl:if test="count(/NewsDetail/NewsOther)>0">
+            <div class="cc-content-newsfade mrt30">
+              <h4>
+                <xsl:value-of select="/NewsDetail/NewsOtherText"></xsl:value-of>
+              </h4>
+              <div class="row">
+                <xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
+              </div>
+            </div>
+          </xsl:if>
+        </div>
+      </div>
+    </section>
+    <!--<xsl:if test="count(/NewsDetail/NewsImages)>0">
+      <xsl:apply-templates select="/NewsDetail/NewsImages"></xsl:apply-templates>
+    </xsl:if>
+    <xsl:if test="count(/NewsDetail/NewsAttributes)>0">
+      <xsl:apply-templates select="/NewsDetail/NewsAttributes" mode="tabs"></xsl:apply-templates>
+      <xsl:apply-templates select="/NewsDetail/NewsAttributes" mode="tabcontent"></xsl:apply-templates>
+    </xsl:if>-->
   </xsl:template>
   <xsl:template match="NewsOther">
-		<div class="lists">
-      <a class="item" href="#">
+    <div class="col-md-3">
+      <div class="item">
+        <figure>
+          <img>
+            <xsl:attribute name="src">
+              <xsl:value-of select="ImageUrl"></xsl:value-of>
+            </xsl:attribute>
+            <xsl:attribute name="alt">
+              <xsl:value-of select="Title"></xsl:value-of>
+            </xsl:attribute>
+          </img>
+          <figcaption>
+            <div class="desc">
+              <h5>
+                <a>
+                  <xsl:attribute name="href">
+                    <xsl:value-of select="Url"></xsl:value-of>
+                  </xsl:attribute>
+                  <xsl:attribute name="target">
+                    <xsl:value-of select="Target"></xsl:value-of>
+                  </xsl:attribute>
+                  <xsl:attribute name="title">
+                    <xsl:value-of select="Title"></xsl:value-of>
+                  </xsl:attribute>
+                  <xsl:value-of select="Title"></xsl:value-of>
+                </a>
+                <xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
+              </h5>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </xsl:template>
+
+  <!--<xsl:template match="NewsAttributes" mode="tabs">
+    <li>
+      <a>
         <xsl:attribute name="href">
-          <xsl:value-of select="Url"></xsl:value-of>
+          <xsl:text>#tab</xsl:text>
+          <xsl:value-of select="position()"></xsl:value-of>
         </xsl:attribute>
-        <xsl:attribute name="target">
-          <xsl:value-of select="Target"></xsl:value-of>
+        <xsl:value-of select="Title"></xsl:value-of>
+      </a>
+    </li>
+  </xsl:template>
+  <xsl:template match="NewsAttributes" mode="tabcontent">
+    <div class="tab-content">
+      <xsl:attribute name="id">
+        <xsl:text>tab</xsl:text>
+        <xsl:value-of select="position()"></xsl:value-of>
+      </xsl:attribute>
+      <xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
+    </div>
+  </xsl:template>
+  <xsl:template match="NewsImages">
+    <li>
+      <a>
+        <xsl:attribute name="href">
+          <xsl:value-of select="ImageUrl"></xsl:value-of>
         </xsl:attribute>
         <xsl:attribute name="title">
           <xsl:value-of select="Title"></xsl:value-of>
         </xsl:attribute>
-        <figure>
-          <div class="img">
-            <img>
-              <xsl:attribute name="src">
-                <xsl:value-of select="ImageUrl"></xsl:value-of>
-              </xsl:attribute>
-              <xsl:attribute name="alt">
-                <xsl:value-of select="Title"></xsl:value-of>
-              </xsl:attribute>
-            </img>
-          </div>
-          <figcaption>
-            <h3>
-            <xsl:attribute name="title">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:value-of select="Title"></xsl:value-of></h3>
-            <time><xsl:value-of select="CreatedDate"></xsl:value-of></time>
-          </figcaption>
-        </figure>
+        <img width="80" height="71">
+          <xsl:attribute name="src">
+            <xsl:value-of select="ImageUrl"></xsl:value-of>
+          </xsl:attribute>
+          <xsl:attribute name="alt">
+            <xsl:value-of select="Title"></xsl:value-of>
+          </xsl:attribute>
+        </img>
       </a>
-    </div>
-			
-	</xsl:template>
-
-
+    </li>
+  </xsl:template>-->
 </xsl:stylesheet>
