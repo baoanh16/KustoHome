@@ -1,0 +1,121 @@
+@import ../../_includes
+.canhcam-boxes-10
+	position: relative
+	z-index: 200
+	.container
+		background: color-get($mau, trang)
+		+pad(50px null 0 null)
+		+media-breakpoint-up(lg)
+			+pad(100px null 0 null)
+			margin-top: -50px
+		.residential-description
+			h1
+				+fz(33px)
+				+fw(500)
+				color: color-get($mau, main)
+				text-transform: uppercase
+				line-height: 33px
+				margin-bottom: 14px
+			span
+				+fz(20px)
+				color: color-get($mau, xam-9)
+				+lh(1)
+				padding-bottom: 16px
+				position: relative
+				display: block
+				margin-bottom: 20px
+				&:after
+					+pos(abs, 100% null null 0)
+					width: 80px
+					height: 1px
+					background: color-get($mau, duong-5)
+					content: ''
+			p
+				+fz(15px)
+				margin-bottom: 15px
+			a
+				margin-top: 45px
+				border-radius: 0
+				padding: 0
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 170px
+				height: 35px
+				border: 1px solid color-get($mau, xam-11)
+				color: color-get($mau, xam-9)
+				text-decoration: none
+		.content
+			background: color-rgba(color-get($mau, duong-5), .1)
+			+pad(40px 30px 30px 30px)
+			h5, p
+				+fz(15px)
+				color: color-get($mau,xam-5)
+			p
+				margin-bottom: 13px
+				margin-left: 30px
+			h5
+				margin-bottom: 4px
+				text-transform: uppercase
+				+fw(500)
+				position: relative
+				&:before
+					display: inline-block
+					font: normal normal normal 24px/1 "Material Design Icons"
+					font-size: inherit
+					text-rendering: auto
+					line-height: inherit
+					-webkit-font-smoothing: antialiased
+					margin-right: 10px
+					+fz(20px)
+					color: color-get($mau, duong-5)
+				&.dev
+					&:before
+						content: "\f009"
+				&.location
+					&:before
+						content: "\F34E"
+				&.project
+					&:before
+						content: "\f1d7"
+				&.land
+					&:before
+						content: "\F04C"
+				&.status
+					&:before
+						content: "\F493"
+				&.phone
+					&:before
+						content: "\f3f2"
+	.residential-gallery
+		margin-top: 40px
+		.owl-carousel
+			display: flex
+			flex-direction: column
+			.owl-nav
+				button
+					span
+						+fz(20px)
+						color: #404040
+					+ button
+						margin-left: 30px
+			.owl-item
+				.item
+					position: relative
+					&:before
+						+transition(all .3s ease-in-out)
+						+pos(abs,0 null null 0)
+						width: 100%
+						height: 100%
+						background: #042533
+						opacity: .8
+						content: ''
+					&.cover
+						&:before
+							opacity: 0
+			+media-breakpoint-up(lg)
+				.owl-nav
+					order: 1
+				.owl-stage-outer
+					order: 2
+		

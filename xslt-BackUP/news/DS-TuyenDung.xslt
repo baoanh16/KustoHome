@@ -33,9 +33,14 @@
 	<xsl:template match="News">
 		<tr>
 			<th scope="row">
-				<a>
-					<xsl:attribute name="href">
-						<xsl:value-of select="Url"></xsl:value-of>
+				<a href="career-detail.html"><xsl:attribute name="href">
+					<xsl:value-of select="Url"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="target">
+						<xsl:value-of select="Target"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="title">
+						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 				</a>
