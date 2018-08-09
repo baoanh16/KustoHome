@@ -28,7 +28,7 @@
 
 	<xsl:template match="Zone" mode="Nav">
 		<li class="nav-item">
-			<a class="nav-link active">
+			<a class="nav-link">
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>
