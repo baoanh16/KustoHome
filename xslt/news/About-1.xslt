@@ -10,7 +10,7 @@
 
 	<xsl:template match="/">
 		<!--Begin nav-->
-		<div class="wrapper" data-spy="scroll" data-target="#kusto-spy" data-offset="60">
+		<div class="wrapper" data-spy="scroll" data-target="#kusto-spy" data-offset="0">
 			<section class="canhcam-nav-1 d-none d-lg-block">
 				<div class="container">
 					<ul class="nav justify-content-center nav-pills" id="kusto-spy">
