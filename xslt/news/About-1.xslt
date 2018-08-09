@@ -6,17 +6,52 @@
 		<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 	</xsl:template>
 	
-	<xsl:template match="Zone">
+
+
+	<xsl:template match="/">
+		<!--Begin nav-->
+		<div class="wrapper" data-spy="scroll" data-target="#kusto-spy" data-offset="60">
+			<section class="canhcam-nav-1 d-none d-lg-block">
+				<div class="container">
+					<ul class="nav justify-content-center nav-pills" id="kusto-spy">
+						<xsl:apply-templates select="/ZoneList/Zone" mode="Nav"></xsl:apply-templates>
+					</ul>
+				</div>
+			</section>
+			<!--End nav-->
+			<!--Begin content-->
+			<xsl:apply-templates select="/ZoneList/Zone" mode="Content"></xsl:apply-templates>
+			<!--End content-->
+		</div>
+	</xsl:template>
+
+	<xsl:template match="Zone" mode="Nav">
+		<li class="nav-item">
+			<a class="nav-link active">
+				<xsl:attribute name="title">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				<!--Match Id-->
+				<xsl:attribute name="href">
+					<xsl:text>#kusto-about-</xsl:text>
+					<xsl:value-of select="position()" />
+				</xsl:attribute>
+				<xsl:value-of select="Title"></xsl:value-of>
+			</a>
+		</li>
+	</xsl:template>
+
+	<xsl:template match="Zone" mode="Content">
 		<xsl:choose>
 			<xsl:when test="position()=1">
-				<section class="canhcam-boxes-2">
+				<section class="canhcam-boxes-2" id="kusto-about-1">
 					<div class="container">
 						<xsl:apply-templates select="News" mode="ZoneNews1"></xsl:apply-templates>
 					</div>
 				</section>
 			</xsl:when>
 			<xsl:when test="position()=2">
-				<section class="canhcam-boxes-3">
+				<section class="canhcam-boxes-3" id="kusto-about-2">
 					<div class="container" bg-img="/Data/Sites/1/skins/default/img/about/a-2.jpg">
 						<h2 class="kusto-title">Vision - Mission</h2>
 						<div class="row">
@@ -27,7 +62,7 @@
 			</xsl:when>
 
 			<xsl:when test="position()=3">
-				<section class="canhcam-boxes-4">
+				<section class="canhcam-boxes-4" id="kusto-about-3">
 					<div class="container">
 						<h2 class="kusto-title">Awards</h2>
 						<div class="owl-carousel owl-theme">
@@ -38,7 +73,7 @@
 			</xsl:when>
 
 			<xsl:when test="position()=4">
-				<section class="canhcam-testimonials-1">
+				<section class="canhcam-testimonials-1" id="kusto-about-4">
 					<div class="container">
 						<h2 class="kusto-title">Our People</h2>
 						<p class="sub-title">Kusto Home has built a team of experienced professionals who have demonstrated complementary financial and managerial skills over several economic and investment cycles in Vietnam.</p>

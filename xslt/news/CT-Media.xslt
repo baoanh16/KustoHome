@@ -54,10 +54,7 @@
 								<xsl:attribute name="href">
 									<xsl:value-of select="Url"></xsl:value-of>
 								</xsl:attribute>
-								<img>
-									<xsl:attribute name="src">
-										<xsl:value-of select="ImageUrl"></xsl:value-of>
-									</xsl:attribute>
+								<img src="/Data/Sites/1/skins/default/img/banner-ads.jpg">
 									<xsl:attribute name="alt">
 										<xsl:value-of select="Title"></xsl:value-of>
 									</xsl:attribute>
