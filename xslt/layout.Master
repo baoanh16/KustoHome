@@ -149,11 +149,11 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
                                 </div>
                             </div>
                             <div class="language ml-auto ml-lg-0">
-                                <portal:ModuleWrapper ID="mdl143" runat="server" ConfigureModuleId="143" />
-                                <!-- <select name="lang">
-									<option value="VN">VN</option>
-									<option value="VN">EN</option>
-								</select> -->
+                                <!-- <portal:ModuleWrapper ID="mdl143" runat="server" ConfigureModuleId="143" /> -->
+                                <select name="lang" name="jumpit" onchange="document.location.href=this.value">
+									<option value="http://preview6308.canhcam.com.vn/">EN</option>
+									<option value="http://preview6308.canhcam.com.vn/vi-VN/Default.aspx">VI</option>
+								</select>
                             </div>
                             <div class="toggle-menu-mobile d-flex d-lg-none">
                                 <span class="fa fa-bars"></span>

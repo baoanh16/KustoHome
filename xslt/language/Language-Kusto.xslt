@@ -3,38 +3,19 @@
     <xsl:output method="html" indent="yes"/>
 
     <xsl:template match="/">
-        <ul class="language list-unstyled mb-0">
+        
+        <select>
             <xsl:apply-templates select="/LanguageList/Language"></xsl:apply-templates>
-        </ul>
+        </select>
     </xsl:template>
 
     <xsl:template match="Language">
-        <li>
-            <xsl:if test="IsActive='true'">
-                <xsl:attribute name="class">
-                    <xsl:text>active</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="class">
-                    <xsl:text>active d-none</xsl:text>
-                </xsl:attribute>
-            </xsl:if>
-            <a>
-                <xsl:attribute name="href">
-                    <xsl:value-of select="Url"></xsl:value-of>
-                </xsl:attribute>
-                <xsl:attribute name="title">
-                    <xsl:value-of select="Title"></xsl:value-of>
-                </xsl:attribute>
-                <!--<img>
-                    <xsl:attribute name="src">
-                        <xsl:value-of select="ImageUrl"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="alt">
-                        <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                </img>-->
-                <xsl:value-of select="Title"></xsl:value-of>
+        <option>
+            <xsl:value-of select="Title"></xsl:value-of>
+            <xsl:attribute name="href">
+                <xsl:value-of select="Url"></xsl:value-of>
+            </xsl:attribute>
             </a>
-        </li>
+        </option>
     </xsl:template>
 </xsl:stylesheet>

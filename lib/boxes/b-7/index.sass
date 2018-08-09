@@ -23,7 +23,7 @@
 				margin-bottom: 0
 				width: 100%
 				position: relative
-				margin-top: 80px
+				margin-top: 70px
 				&:after
 					position: absolute
 					content: ''
@@ -33,17 +33,19 @@
 					top: -40px
 					left: 0
 				&.benefit
+					&:after
+						display: none
 					text-transform: uppercase
 					color: black
 					margin-bottom: 20px
 					+fz(16px)
 					+fw(500)
-					margin-top: 30px
+					margin-top: 40px
 			ul
 				width: 100%
 				list-style-type: none
 				padding-left: 0
-				margin-bottom: 30px
+				margin-bottom: 0
 				li
 					+lh(35px)
 					+fw(300)
@@ -141,6 +143,7 @@
 					display: flex
 					color: color-get($mau, xam-9)
 					flex-direction: column
+					+fz(13px)
 					p
 						margin-bottom: 0
 						&:before
