@@ -13,7 +13,7 @@
 								<xsl:value-of select="/NewsDetail/Title"></xsl:value-of>
 							</h2>
 						</div>
-						<div class="text row">
+						<div class="text row no-gutters">
 							<xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
 						</div>
 						<a class="btn"> APPLY NOW

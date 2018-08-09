@@ -25,6 +25,9 @@
 			+lh(22px)
 			+mar(0)
 			+pad(9px 45px)
+			&.active
+				background: color-get($mau,duong-5)
+				color: color-get($mau,trang)
 		+ .nav-item
 			&:before
 				content: ''
@@ -37,7 +40,7 @@
 		&:last-child
 			.nav-link
 				margin-right: 0
-		&:hover, &.active 
+		&:hover
 			.nav-link
 				background: color-get($mau,duong-5)
 				color: color-get($mau,trang)

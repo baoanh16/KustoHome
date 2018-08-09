@@ -10,9 +10,9 @@
 					<div class="col-lg-8">
 						<div class="text">
 							<h1><xsl:value-of select="/NewsDetail/Title"></xsl:value-of>
+							</h1>
 							<p><xsl:value-of select="/NewsDetail/SubTitle" disable-output-escaping="yes"></xsl:value-of>
 							</p>
-							</h1>
 							<xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
 						</div>
 					</div>
