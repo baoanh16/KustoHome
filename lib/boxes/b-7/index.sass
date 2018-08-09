@@ -75,10 +75,6 @@
 				.title
 					flex: 0 0 50%
 					max-width: 50%
-					+media-breakpoint-up(xl)
-						flex: 0 0 40%
-						max-width: 40%
-
 					display: flex
 					span
 						margin-right: 15px
@@ -88,6 +84,18 @@
 				.content
 					p
 						+fw(300)
+				+media-breakpoint-up(lg)
+					flex-wrap: wrap
+					.title
+						flex: 0 0 100%
+						max-width: 100%
+						p
+							margin-bottom: 0
+				+media-breakpoint-up(xl)
+					flex-wrap: unset
+					.title
+						flex: 0 0 40%
+						max-width: 40%
 
 		.btn
 			border: 1px solid color-get($mau, duong-5)
