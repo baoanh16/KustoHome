@@ -225,8 +225,8 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
         </form>
         <!-- ////////////// Back to Top ////////////// -->
         <a href="#top-page" id="back-to-top" title="Back to top">
-            <span>TOP</span>
             <i class="fa fa-angle-up"></i>
+            <span>TOP</span>
         </a>
         <!-- ////////////// Javascript Include ////////////// -->
         <script src="/Data/Sites/1/skins/default/js/core.js?v=1.0.0"></script>

@@ -8,9 +8,38 @@
 		+media-breakpoint-up(lg)
 			+pad(100px null 0 null)
 			margin-top: -50px
-		.col-lg-4
+		.Module-163
+			margin-bottom: 30px
+			+media-breakpoint-up(lg)
+				margin-bottom: 0
+			.ModuleContent
+				height: 100%
 			.text
-				+pad(40px)
+				height: 100%
+				+pad(45px 30px)
+				h3
+					+fz(20px)
+					color: color-get($mau, main)
+					margin-bottom: 30px
+					text-transform: uppercase
+				.contact
+					display: flex
+					.icon
+						margin-right: 12px
+						+fz(20px)
+						color: color-get($mau, duong-5)
+						span
+							&:before
+								display: flex
+								+lh(1)
+					.sub-text
+						padding-top: 2px
+						padding-bottom: 20px
+						h4
+							margin-bottom: 4px
+						p
+							margin-bottom: 0
+							+fz(15px)
 	.system-title
 		display: none
 	.filtermap
@@ -23,21 +52,65 @@
 				+fw(500)
 				color: color-get($mau, main)
 				text-transform: uppercase
-				margin-bottom: 40px
+				margin-bottom: 15px
 				line-height: 33px
+				color: #042533
 			p
+				+fz(15px)
+				+fw(300)
+				color: #404040
 		.Module.Module-165
 			.wrap-contact
 				#ctl00_mainContent_ctl04_pnlSend
 					display: flex
 					flex-wrap: wrap
+					justify-content: space-between
 					.form-group
+						margin-bottom: 20px
+						max-width: 100%
+						flex: 0 0 100%
+						position: relative
+						span
+							position: absolute
+							top: 50%
+							right: 12px
+							transform: translateY(-50%)
+							color: red
 						label
 							display: none
-						&.ct-name, &.ct-address, &.ct-email, &.ct-phone
-							max-width: 50%
-							flex: 0 0 50%
-		
-
-			
-
+						+media-breakpoint-up(md)
+							&.ct-name, &.ct-address, &.ct-email, &.ct-phone
+								max-width: calc(50% - 10px)
+								flex: 0 0 calc(50% - 10px)
+						input, textarea
+							width: 100%
+							box-sizing: border-box
+							padding-left: 20px
+							font-style: italic
+							+fz(14px)
+							+fw(300)
+							color: #999999
+							border-color: #ebebeb
+						input
+							height: 50px
+						textarea
+							height: 120px
+							padding-top: 14px
+						&.ct-button
+							margin-bottom: 0
+							input
+								+pad(0)
+								width: 150px
+								height: 50px
+								display: flex
+								justify-content: center
+								align-items: center
+								background: color-get($mau, duong-5)
+								color: white
+								text-transform: uppercase
+								font-style: normal
+								border-color: color-get($mau, duong-5)
+								+fz(16px)
+								&:hover
+									background: lighten(color-get($mau,duong-5), 20%)
+									color: white
