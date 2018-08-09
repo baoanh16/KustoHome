@@ -5,9 +5,12 @@
 	.container
 		background: color-get($mau, trang)
 		+pad(50px null 0 null)
+		
 		+media-breakpoint-up(lg)
 			+pad(100px null 0 null)
 			margin-top: -50px
+		.row
+			margin-top: 20px
 		.residential-description
 			h1
 				+fz(33px)
@@ -32,7 +35,7 @@
 					content: ''
 			p
 				+fz(15px)
-				margin-bottom: 15px
+				margin-bottom: 25px
 			a
 				margin-top: 45px
 				border-radius: 0
@@ -47,7 +50,7 @@
 				text-decoration: none
 		.content
 			background: color-rgba(color-get($mau, duong-5), .1)
-			+pad(40px 30px 30px 30px)
+			+pad(40px 30px 20px 25px)
 			h5, p
 				+fz(15px)
 				color: color-get($mau,xam-5)
