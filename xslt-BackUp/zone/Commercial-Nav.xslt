@@ -12,18 +12,14 @@
 
   <xsl:template match="Zone">
 
-		<li class="nav-item">
-			<xsl:if test="IsActive='true'">
-			<xsl:attribute name="class">
-				<xsl:text>nav-item active</xsl:text>
+    <li class="nav-item">
+		<a class="nav-link">
+			<xsl:attribute name="href">
+				<xsl:text>#com-</xsl:text>
+				<xsl:value-of select="position()" />
 			</xsl:attribute>
-			</xsl:if>
-			<a class="nav-link">
-				<xsl:attribute name="href">
-					<xsl:value-of select="Url"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-			</a>
-		</li>
-	</xsl:template>
+			<xsl:value-of select="Title"></xsl:value-of>
+		</a>
+	</li>
+  </xsl:template>
 </xsl:stylesheet>
