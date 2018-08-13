@@ -6,6 +6,14 @@
 		+media-breakpoint-up(lg)
 			+pad(100px null 75px null)
 		.owl-carousel
+			+media-breakpoint-up(lg)
+				.item
+					img
+						filter: grayscale(1)
+						+transition(all .3s ease-in-out)
+					&:hover
+						img
+							filter: grayscale(0)
 			.owl-nav
 				margin-top: 30px
 				.owl-prev

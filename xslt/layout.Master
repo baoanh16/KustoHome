@@ -130,7 +130,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
             <div id="wrapper">
                 <header class="canhcam-header-1">
                     <div class="container">
-                        <div class="row no-gutters align-items-center">
+                        <div class="row align-items-center">
                             <div class="logo">
                                 <portal:ModuleWrapper ID="mdl138" runat="server" ConfigureModuleId="138" />
                             </div>
@@ -150,9 +150,9 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
                             </div>
                             <div class="language ml-auto ml-lg-0">
                                 <!-- <portal:ModuleWrapper ID="mdl143" runat="server" ConfigureModuleId="143" /> -->
-                                <select name="lang" name="jumpit" onchange="document.location.href=this.value">
-									<option value="http://preview6308.canhcam.com.vn/">EN</option>
-									<option value="http://preview6308.canhcam.com.vn/vi-VN/Default.aspx">VI</option>
+                                <select id="lang">
+									<option value="EN">EN</option>
+									<option value="VN">VN</option>
 								</select>
                             </div>
                             <div class="toggle-menu-mobile d-flex d-lg-none">

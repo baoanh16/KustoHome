@@ -238,10 +238,14 @@ main
 		+pad(null 30px)
 		+media-breakpoint-up(lg)
 			+pad(null 60px)
-
-.pages.newspager
+.ModuleContent
 	position: relative
+.pages.newspager
+	position: absolute
 	z-index: 9999
+	bottom: 70px
+	left: 50%
+	transform: translateX(-50%)
 	.pagination
 		justify-content: center
 		+pad(2rem 0 0 0)
@@ -270,3 +274,32 @@ main
 						background: color-get($mau, duong-5)
 						+pos(abs, calc(100% + 4px) null null 50%)
 						transform: translateX(-50%)
+
+.apply-frm
+	+pad( 30px)
+	h4
+		+fz(20px)
+		color: color-get($mau, main)
+		text-transform: uppercase
+	.form-group
+		label
+			+fz(15px)
+			+fw(500)
+			margin-bottom: 10px
+		input
+			line-height: 40px
+			padding-left: 12px
+			display: flex
+			align-items: center
+		.frm-btnwrap
+			input
+				padding-left: 0
+				width: 150px
+				justify-content: center
+				background: color-get($mau, duong-5)
+				color: white
+				border-color: color-get($mau, duong-5)
+		.ruInputs
+			.ruStyled
+				input
+					+lh(1.25)

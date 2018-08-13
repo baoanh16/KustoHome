@@ -16,8 +16,15 @@
 						<div class="text row no-gutters">
 							<xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
 						</div>
-						<a class="btn"> APPLY NOW
+						<a class="btn kusto-toggle-form"> APPLY NOW
 						</a>
+						<div class="kusto-apply-form" id="kusto-form-apply" style="display:none;">
+							<iframe class="frame" frameborder="0" width="100%" height="400px">
+							<xsl:attribute name="src">
+								<xsl:value-of select="/NewsDetail/ApplyUrl" disable-output-escaping="yes"/>
+							</xsl:attribute>
+							</iframe>
+						</div>
 					</div>
 					<div class="col-lg-4 other">
 						<div class="text">
