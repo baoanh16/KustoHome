@@ -49,7 +49,7 @@
 								<xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
 							</div>
 						</div>
-						<div class="ads">
+						<div class="ads" data-fix="60" data-fix-type="initial" data-fix-change="sticky" style="z-index: 500; position: sticky; top: 80px;">
 							<a>
 								<xsl:attribute name="href">
 									<xsl:value-of select="Url"></xsl:value-of>
