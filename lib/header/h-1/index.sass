@@ -37,6 +37,24 @@
 						+pad(.75rem 0)
 						+fz(16px)
 						text-transform: uppercase
+					.nav-item
+						position: relative
+						.dropdown-content
+							display: none
+							position: absolute
+							width: 100%
+							background: color-get($mau,duong-2)
+							a
+								display: block
+								// color: color-get($mau,den)
+								border-bottom: 1px solid color-get($mau,den)
+						&:hover
+							background: linear-gradient(to bottom, color-get($mau,duong-5), color-get($mau, duong-4))
+							.dropdown-content
+								display: block
+								
+						
+
 
 		.social
 			order: 3
