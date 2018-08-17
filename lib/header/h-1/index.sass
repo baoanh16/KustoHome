@@ -45,7 +45,25 @@
 						>.nav-item
 							width: 100%
 							>.nav-link
-								width: 150px
+								width: 115px
+						li
+							position: relative
+							&.nav-item
+								&:nth-child(2),
+								&:nth-child(3),
+								&:nth-child(4),
+									&:before
+										font-family: 'Font Awesome 5 Free'
+										font-weight: 900
+										content: "\f150"
+										position: absolute
+										top: 5px
+										font-size: 1.5rem
+										left: 90%
+										cursor: pointer
+										color: color-get($mau,trang)
+
+
 
 		.social
 			order: 3
