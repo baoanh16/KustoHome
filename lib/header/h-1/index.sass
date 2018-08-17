@@ -30,13 +30,22 @@
 					width: 100%
 					margin-top: 2rem
 					border-top: 1px dotted color-get($mau, trang)
-					+pad(0 15px)
+					// +pad(0 15px)
+					+pad(.75rem 15px)
+					.nav-child
+						display: none
+						list-style-type: none
+						padding-left: 0
 					.nav-link
 						color: color-get($mau,trang)
 						+fw(300)
-						+pad(.75rem 0)
 						+fz(16px)
 						text-transform: uppercase
+					+media-breakpoint-down(md)
+						>.nav-item
+							width: 100%
+							>.nav-link
+								width: 150px
 
 		.social
 			order: 3
@@ -157,16 +166,37 @@
 						border-top: none
 						margin-top: 0
 						padding-right: 15px
-						.nav-link
-							+fz(14px)
-							+pad(10px)
-							+media-breakpoint-up(xl)
-								+pad(10px 15px)
-							line-height: 1
+						.nav-item
+							position: relative
+							.nav-link
+								+fz(14px)
+								+pad(10px)
+								+media-breakpoint-up(xl)
+									+pad(10px 15px)
+								line-height: 1
+							.nav-child
+								position: absolute
+								width: 200px
+								top: 100%
+								display: none
+								background: white
+								list-style-type: none
+								padding-left: 0
+								.nav-child-item
+									.nav-link
+										color: color-get($mau, duong-4)
+									&:hover
+										.nav-link
+											color: color-get($mau,tramg)
+											// +fw(500)
+											background: linear-gradient(to bottom, color-get($mau,duong-5), color-get($mau, duong-4))
 							&.active, &:hover
-								color: color-get($mau,tramg)
-								// +fw(500)
-								background: linear-gradient(to bottom, color-get($mau,duong-5), color-get($mau, duong-4))
+								>.nav-link
+									color: color-get($mau,tramg)
+									// +fw(500)
+									background: linear-gradient(to bottom, color-get($mau,duong-5), color-get($mau, duong-4))
+								.nav-child
+									display: block
 			.social
 				order: 2
 				.ModuleContent
