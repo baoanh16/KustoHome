@@ -35,7 +35,7 @@
     "elevatezoom": "2.2.3",
     "k-responsive-menu": "4.0.1",
     "linearicons": "1.0.1",
-    "fancybox": "3.3.5",
+    "fancybox": "^3.3.5",
     "jquery.scrollbar": "0.2.11",
     "aos": "^2.3.3"
   }

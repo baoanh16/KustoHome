@@ -31,31 +31,33 @@
 			+media-breakpoint-up(lg)
 				max-width: 56%
 			margin: 0 auto 60px auto
-	.testimonial-slider
-		.item
-			text-align: center
-			margin-bottom: 0
-			width: 100%
-			img
-				max-width: 190px
-				// +bor-rad(50%)
-				display: inline-block
-				margin-bottom: 30px
-			figcaption
-				margin: 0 auto
-				+media-breakpoint-up(lg)
-					max-width: 600px
-				h4
-					+fz(18px)
-					+fw(500)
-					text-transform: uppercase
-					color: color-get($mau, xam-5)
-				p
-					+fz(13px)
-					+fw(300)
-					+lh(24px)
-					color: color-get($mau, xam-10)
-					margin-bottom: 0
+		.testimonial-slider
+			.item
+				text-align: center
+				margin-bottom: 0
+				width: 100%
+				outline: none
+				img
+					max-width: 190px
+					// +bor-rad(50%)
+					display: inline-block
+					margin-bottom: 30px
+				figcaption
+					margin: 0 auto
+					+media-breakpoint-up(lg)
+						max-width: 600px
+					h4
+						+fz(18px)
+						+fw(500)
+						text-transform: uppercase
+						color: color-get($mau, xam-5)
+					p
+						+fz(13px)
+						+fw(300)
+						+lh(24px)
+						color: color-get($mau, xam-10)
+						margin-bottom: 0
+			
 			// +media-breakpoint-up(lg)
 			// 	img
 			// 		filter: grayscale(1)
@@ -70,6 +72,11 @@
 				display: flex
 			.owl-item
 				display: flex
+				a
+					&.fancybox
+						width: 423.333px
+						margin-right: 20px
+						text-decoration: none
 		.owl-dots
 			margin-top: 30px
 			width: 100%
@@ -87,3 +94,31 @@
 				&.active
 					span
 						background: color-get($mau,main)
+.fancybox-inner
+	.fancybox-stage
+		.fancybox-slide
+			.fancybox-content
+				width: 50%
+				display: flex
+				text-align: center
+				.fancy-img
+					margin-bottom: 1.5rem
+				.fctext
+					font-family: 'Oswald', sans-serif
+					h4
+						font-size: 18px
+						font-weight: 500
+						text-transform: uppercase
+						color: #333333
+						margin-bottom: 0
+					p
+						font-size: 13px
+						font-weight: 300
+						line-height: 24px
+						color: #666666
+						margin-bottom: 1rem
+					.fancy-info
+						+fz(1.2rem)
+						+fw(300)
+						color: #353535
+					

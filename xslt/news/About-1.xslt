@@ -99,7 +99,7 @@
 		</h2>
 		<div class="row">
 			<div class="col-lg-6">
-				<div class="img" bg-img="/Data/Sites/1/News/57/a-1.jpg">
+				<div class="img"  bg-img="/Data/Sites/1/News/57/a-1.jpg">
 					<img>
 						<xsl:attribute name="src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -124,7 +124,7 @@
 
 	<xsl:template match="News" mode="ZoneNews2">
 		<div class="col-lg-6">
-			<div class="img">
+			<div class="img" (data-aos="fade-down-right" data-aos-once="true" data-aos-duration="1500")>
 				<img>
 					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>

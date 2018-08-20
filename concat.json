@@ -44,6 +44,7 @@
             "bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js",
             "bower_components/freewall/freewall.js",
             "bower_components/aos/dist/aos.js"
+            
         ],
         "css": [
             "bower_components/select2/dist/css/select2.min.css",
@@ -59,6 +60,7 @@
             "bower_components/owl.carousel/dist/assets/owl.carousel.min.css",
             "bower_components/owl.carousel/dist/assets/owl.theme.default.css",
             "bower_components/aos/dist/aos.css"
+            
             
         ]
     }

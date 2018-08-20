@@ -57,6 +57,9 @@
 			
 			.item
 				position: relative
+				overflow: hidden
+				img
+					transition: all .5s ease-in-out
 				.content
 					+pad(.75rem 0 0 0)
 					h3
@@ -73,7 +76,9 @@
 						height: 35px
 						border: 1px solid color-get($mau, main)
 						color: color-get($mau, main)
-
+				&:hover
+					img
+						transform: scale(1.5)
 				+media-breakpoint-up(lg)
 					.content
 						+pos(abs,0 null null 0)
