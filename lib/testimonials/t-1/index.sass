@@ -40,8 +40,8 @@
 				img
 					max-width: 190px
 					// +bor-rad(50%)
-					display: inline-block
-					margin-bottom: 30px
+					// display: inline-block
+					margin: 0 auto 30px
 				figcaption
 					margin: 0 auto
 					+media-breakpoint-up(lg)
@@ -74,9 +74,12 @@
 				display: flex
 				a
 					&.fancybox
-						width: 423.333px
-						margin-right: 20px
+						width: 100%
+						display: block
 						text-decoration: none
+						&:focus
+							outline: none
+							border: 0
 		.owl-dots
 			margin-top: 30px
 			width: 100%

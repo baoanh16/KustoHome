@@ -50,6 +50,12 @@
 			
 			.item
 				position: relative
+				overflow: hidden
+				img
+					transition: .3s all ease-in-out
+				&:hover
+					img
+						transform: scale(1.1)
 				.content
 					+pad(.75rem 0 0 0)
 					p

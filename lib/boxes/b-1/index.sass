@@ -51,6 +51,7 @@
 			
 			.item
 				position: relative
+				overflow: hidden
 				.content
 					+pad(.75rem 0 0 0)
 					h3
@@ -95,6 +96,9 @@
 							&:hover
 								background: color-get($mau, trang)
 								color: color-get($mau, main)
+					&:hover
+						img
+							transform: scale(1.1)
 				+media-breakpoint-up(xl)
 					.content
 						h3
