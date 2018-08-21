@@ -124,14 +124,14 @@
 
 	<xsl:template match="News" mode="ZoneNews2">
 		<div class="col-lg-6">
-			<div class="img" (data-aos="fade-down-right" data-aos-once="true" data-aos-duration="1500")>
+			<div class="img" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
 				<img>
 					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
 				</img>
 			</div>
-			<div class="text">
+			<div class="text" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
 				<h4><xsl:value-of select="Title"></xsl:value-of></h4>
 				<p><xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of></p>
 			</div>
@@ -164,17 +164,17 @@
 
 	<xsl:template match="News" mode="ZoneNews4">
 		<figure class="item">
-			<img>
-				<xsl:attribute name="src">
-					<xsl:value-of select="ImageUrl"></xsl:value-of>
-				</xsl:attribute>
-			</img>
-			<figcaption>
-			<h4>
-				<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-			</h4>
-			<p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
-			</figcaption>
+				<img>
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+				</img>
+				<figcaption>
+				<h4>
+					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+				</h4>
+				<p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
+				</figcaption>
 		</figure>
 		<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 	</xsl:template>
