@@ -163,11 +163,21 @@
 	</xsl:template>
 
 	<xsl:template match="News" mode="ZoneNews4">
+<<<<<<< HEAD
 		<figure class="item">
+=======
+		<a class="fancybox">
+			<xsl:attribute name="href">
+				<xsl:text>#fancytext</xsl:text>
+				<xsl:value-of select="position()" />
+			</xsl:attribute>
+			<figure class="item">
+>>>>>>> d3e931501c0103483f91b6fe3b8e3148a74081f9
 				<img>
 					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
+<<<<<<< HEAD
 				</img>
 				<figcaption>
 				<h4>
@@ -189,15 +199,39 @@
 				<xsl:attribute name="src">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
+=======
+>>>>>>> d3e931501c0103483f91b6fe3b8e3148a74081f9
 				</img>
 				<figcaption>
-					<h3>
+					<h4>
 						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-					</h3>
-					<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+					</h4>
+					<p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
 				</figcaption>
 			</figure>
-		</div>
-	</xsl:template> -->
+			<div class="fancy" style="display: none">
+				<xsl:attribute name="id">
+					<xsl:text>fancytext</xsl:text>
+					<xsl:value-of select="position()" />
+				</xsl:attribute>
+				<div class="fancy-img">
+					<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</div>
+				<div class="fctext">
+					<h4>
+						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+					</h4>
+					<p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
+					<p class="fancy-info">
+						<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
+					</p>
+				</div>
+			</div>
+		</a>
+		<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+	</xsl:template>
 </xsl:stylesheet>
