@@ -163,44 +163,16 @@
 	</xsl:template>
 
 	<xsl:template match="News" mode="ZoneNews4">
-<<<<<<< HEAD
-		<figure class="item">
-=======
 		<a class="fancybox">
 			<xsl:attribute name="href">
 				<xsl:text>#fancytext</xsl:text>
 				<xsl:value-of select="position()" />
 			</xsl:attribute>
 			<figure class="item">
->>>>>>> d3e931501c0103483f91b6fe3b8e3148a74081f9
 				<img>
 					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
-<<<<<<< HEAD
-				</img>
-				<figcaption>
-				<h4>
-					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-				</h4>
-				<p><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></p>
-				</figcaption>
-		</figure>
-		<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-	</xsl:template>
-	<!-- <xsl:template match="News" mode="ZoneNewsOther">
-		
-			<h2>
-				<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-			</h2>
-		<div class="col-md-6 col-12">
-			<figure class="text-center">
-				<img class="img-fluid" src="./img/about_icon_1.png" alt="alt">
-				<xsl:attribute name="src">
-					<xsl:value-of select="ImageUrl"></xsl:value-of>
-				</xsl:attribute>
-=======
->>>>>>> d3e931501c0103483f91b6fe3b8e3148a74081f9
 				</img>
 				<figcaption>
 					<h4>
