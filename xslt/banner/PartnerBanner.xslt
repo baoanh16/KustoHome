@@ -4,7 +4,7 @@
 
   	<xsl:template match="/">
 		<article class="container">
-			<h2 class="kusto-title">
+			<h2 class="kusto-title scroll-partner">
 				<xsl:value-of select="/BannerList/ModuleTitle"></xsl:value-of>
 			</h2>
 			<div class="owl-carousel owl-theme list-items">
@@ -17,7 +17,7 @@
 	<!--Begin Banner Child-->
 	<xsl:template match="Banner">
 		<!--item-->
-		<div class="item">
+		<div class="item scroll-partner">
 			<img>
 				<xsl:attribute name="src">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>

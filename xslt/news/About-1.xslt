@@ -66,7 +66,7 @@
 				<section class="canhcam-boxes-4" id="kusto-about-3">
 					<div class="container">
 						<h2 class="kusto-title">Awards</h2>
-						<div class="owl-carousel owl-theme">
+						<div class="owl-carousel owl-theme scroll">
 							<xsl:apply-templates select="News" mode="ZoneNews3"></xsl:apply-templates>
 						</div>
 					</div>
@@ -76,9 +76,9 @@
 			<xsl:when test="position()=4">
 				<section class="canhcam-testimonials-1" id="kusto-about-4">
 					<div class="container">
-						<h2 class="kusto-title">Our People</h2>
-						<p class="sub-title">Kusto Home has built a team of experienced professionals who have demonstrated complementary financial and managerial skills over several economic and investment cycles in Vietnam.</p>
-						<div class="row">
+						<h2 class="kusto-title scroll">Our People</h2>
+						<p class="sub-title scroll">Kusto Home has built a team of experienced professionals who have demonstrated complementary financial and managerial skills over several economic and investment cycles in Vietnam.</p>
+						<div class="row scroll">
 							<div class="col">
 								<div class="testimonial-slider owl-carousel">
 									<xsl:apply-templates select="News" mode="ZoneNews4"></xsl:apply-templates>
@@ -98,7 +98,7 @@
 			<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 		</h2>
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-lg-6 scroll animated fadeInUp delay-2s">
 				<div class="img"  bg-img="/Data/Sites/1/News/57/a-1.jpg">
 					<img>
 						<xsl:attribute name="src">
@@ -107,7 +107,7 @@
 					</img>
 				</div>
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-6 scroll animated fadeInUp delay-2s">
 				<div class="text"> 
 					<p class="bold">
 						<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
@@ -123,15 +123,15 @@
 
 
 	<xsl:template match="News" mode="ZoneNews2">
-		<div class="col-lg-6">
-			<div class="img" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+		<div class="col-lg-6 scroll">
+			<div class="img">
 				<img>
 					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
 				</img>
 			</div>
-			<div class="text" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+			<div class="text">
 				<h4><xsl:value-of select="Title"></xsl:value-of></h4>
 				<p><xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of></p>
 			</div>

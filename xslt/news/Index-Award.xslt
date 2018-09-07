@@ -5,10 +5,10 @@
 	<!--Begin News-->
 	<xsl:template match="/">
 		<article class="container">
-			<h2 class="kusto-title">
+			<h2 class="kusto-title scroll">
 				<xsl:value-of select="/NewsList/ModuleTitle"></xsl:value-of>
 			</h2>
-			<div class="owl-carousel owl-theme">
+			<div class="owl-carousel owl-theme scroll">
 				<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 			</div>
 		</article>
