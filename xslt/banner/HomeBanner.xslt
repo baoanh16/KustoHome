@@ -6,6 +6,13 @@
 		<xsl:if test="count(/BannerList/Banner) > 0">
 			<article class="list-items">
 				<!--Call Banner Child-->
+				
+				<!--item-->
+				<!-- <div class="item">
+					<video style="width: 100%" autoplay="" loop="" id="bannerVideo">
+						<source src="/Data/Sites/1/skins/default/img/video.mp4" type="video/mp4"></source>
+					</video>
+				</div> -->
 				<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 			</article> 
 		</xsl:if>
