@@ -66,6 +66,56 @@
 			// 			filter: grayscale(0)
 	.owl-carousel
 		position: relative
+		.owl-nav
+			margin-top: 30px
+			text-align: center
+			.owl-prev
+				right: 100%
+			.owl-next
+				left: 100%
+			.owl-prev, .owl-next
+				+mar(0 15px)
+				.mdi
+					+fz(40px)
+					opacity: .3
+					&:before
+						width: 36px
+						height: 36px
+						display: flex
+						justify-content: center
+						align-items: center
+						background: color-rgba(color-get($mau, main), .3)
+						color: color-get($mau, main)
+				&:hover,&:focus
+					background: none
+					outline: none
+			+media-breakpoint-up(lg)
+				width: 100%
+				position: absolute
+				top: 50%
+				height: 0
+				margin-top: 0
+				transform: translateY(-50%)
+				.owl-prev
+					right: calc(100% - 30px)
+				.owl-next
+					left: calc(100% - 30px)
+				.owl-prev, .owl-next
+					+mar(0)
+					top: 50%
+					transform: translateY(-50%)
+					position: absolute
+					.mdi
+						+fz(55px)
+						&:before
+							background: none
+							color: color-rgba(color-get($mau, main), .3)
+			+media-breakpoint-up(xl)
+			
+				.owl-prev
+					right: calc(100% - 60px)
+				.owl-next
+					left: calc(100% - 60px)
 		// Main
 		.owl-stage-outer
 			.owl-stage
