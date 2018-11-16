@@ -7,12 +7,18 @@
 			<article class="list-items">
 				<!--Call Banner Child-->
 				
-				<!--item-->
+				<!-- item-->
 				<!-- <div class="item">
 					<video style="width: 100%" autoplay="" loop="" id="bannerVideo">
-						<source src="/Data/Sites/1/skins/default/img/video.mp4" type="video/mp4"></source>
+						<source src="/Data/Sites/1/media/kusto_video.mp4" type="video/mp4"></source>
 					</video>
 				</div> -->
+				<div class="item">
+					<!-- <video style="width: 100%" autoplay="" loop="" id="bannerVideo">
+						<source src="/Data/Sites/1/media/kusto_video.mp4" type="video/mp4" controls="false"></source>
+					</video> -->
+					<iframe src="/Data/Sites/1/media/kusto_video.mp4" autoplay="" controls="false" frameborder="0"></iframe>
+				</div>
 				<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 			</article> 
 		</xsl:if>
